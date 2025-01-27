@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ListDisplay from './ListDisplay';
 import { IoFilter } from "react-icons/io5";
+import { ToastContainer, toast } from 'react-toastify';
 import NoData from './NoData';
 
 function FilterTask({ tasks, onDelete, onEdit }) {
@@ -25,6 +26,7 @@ function FilterTask({ tasks, onDelete, onEdit }) {
 
             if (filterTaskArr.length === 0) {
                 alert("no data is here....")
+                toast.success('Task Fitered Successfully...')
                 // {<NoData />}
             }
            
@@ -61,6 +63,7 @@ function FilterTask({ tasks, onDelete, onEdit }) {
                 <button onClick={() => handleFilteredTask(tasks)} className='w-1/6 ml-4 py-2 px-3 bg-blue-500 text-white font-serif font-bold hover:bg-blue-800 rounded-lg  flex items-center active:bg-orange-300 gap-2'><IoFilter size={20}/> <h1>Apply filter</h1></button>
             </div>
             <ListDisplay filteredTask={filteredTask} deleteFunction={onDelete} editTask={onEdit} />
+            <ToastContainer />
 
         </>
     )

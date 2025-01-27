@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import FilterTask from './FilterTask'
 import { FaPlus } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 function TaskCreate() {
@@ -64,11 +65,13 @@ function TaskCreate() {
       const taskToUpdate = [...taskData]
       taskToUpdate[editTask] = createdTask
       setTaskData(taskToUpdate)
+      toast.success("Task updated successfully!");
       setEditTask(null)
     } else {
 
       setTaskData([...taskData, createdTask])
       console.log(createdTask);
+      toast.success("Task created successfully!");
       // form.reset()
       setTitle("");
       setDescription("");
@@ -147,6 +150,7 @@ function TaskCreate() {
         </div>
       </form>
       <FilterTask tasks={taskData} onDelete={handleDelete} onEdit={handleEditTask} />
+      <ToastContainer />
     </>
 
   )
