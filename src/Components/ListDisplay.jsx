@@ -88,7 +88,6 @@ function ListDisplay({ filteredTask, deleteFunction, editTask }) {
                 </div>
 
                 <div className='w-[25%] h-[250px] rounded-lg hover:shadow-2xl transition-shadow duration-[200ms]   bg-orange-200 py-2 px-3 sticky top-[12vh]'>
-                    <div className='w-[4%] h-[4%]  m-auto mb-2 bg-gray-600 rounded-full shadow-4xl'></div>
                     <h1 className='text-center font-semibold font-serif py-2 hover:bg-purple-300 bg-purple-200 rounded'>Progress Tracker</h1>
                     <h1 className='text-center mt-3'><strong>Total Task :</strong> {totalTask}</h1>
                     <h1 className='text-center font-serif mt-3'>Completed Task : {completePercentage}%</h1>

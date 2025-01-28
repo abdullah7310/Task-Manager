@@ -142,6 +142,7 @@ function TaskCreate() {
           <select required value={status} onChange={handleStatus} className='w-full px-2 py-2 mb-4 border-2 border-black' name="" id="">
             <option value="pending">Pending</option>
             <option value="completed">Completed</option>
+            <option value="inprogress">In-Progress</option>
           </select>
           </div>
         </div>
