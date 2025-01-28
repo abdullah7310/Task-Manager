@@ -57,6 +57,7 @@ function FilterTask({ tasks, onDelete, onEdit }) {
                 <select value={status} onChange={(el) => setStatus(el.target.value)} className="w-1/3 py-2 px-3 bg-orange-200 hover:bg-orange-300  rounded-lg" id="">
                     <option value="all">all</option>
                     <option value="pending">Pending</option>
+                    <option value="inprogress">In Progress</option>
                     <option value="completed">Completed</option>
                 </select>
 
